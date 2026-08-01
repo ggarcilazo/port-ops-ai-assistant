@@ -1,0 +1,7 @@
+MANUAL DE PROCEDIMIENTOS OPERATIVOS - TERMINAL PORTUARIA (SISTEMA NAVIS N4)
+
+PROCEDIMIENTO 01: ASIGNACIÓN DE GRÚAS PÓRTICO (STS)
+Para iniciar la descarga de un buque portacontenedores, el operador de patio debe validar la orden en la sección 'Vessel Planning'. Las grúas STS deben posicionarse según las coordenadas de la bahía asignada.
+
+PROCEDIMIENTO 02: PROTOCOLO DE INCIDENTES EN MUELLE
+Ante un bloqueo en la zona de transferencia por falla de un camión interno (TT), el operario debe activar la alerta de seguridad en la consola y cambiar el estado del contenedor a 'Hold-Mechanical' en Navis N4 para detener las grúas adyacentes de inmediato.
