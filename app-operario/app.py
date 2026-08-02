@@ -1,16 +1,23 @@
 import streamlit as st
+import requests
 
 st.set_page_config(page_title="Asistente IA Portuaria", page_icon="⚓")
-st.title("⚓ Asistente de IA - Operaciones Portuarias (Navis N4)")
-st.write("Consulte procedimientos operativos y protocolos de muelle en tiempo real.")
+st.title("⚓ Asistente de IA - Operaciones Portuarias")
 
-# Campo de texto para la consulta del operario
-pregunta = st.text_input("Escriba su consulta técnica:")
+# Leemos el JSON que generó la IA de tu compañero en GitHub
+url_json = "https://githubusercontent.com"
+
+try:
+    data_ia = requests.get(url_json).json()
+except:
+    data_ia = {}
+
+pregunta = st.text_input("Escriba su consulta técnica (grúa / falla):")
 
 if st.button("Consultar Asistente"):
-    if "grúa" in pregunta.lower() or "sts" in pregunta.lower():
-        st.info("**Respuesta de la IA (RAG):** Según el procedimiento 01, el operador debe validar la orden en la sección 'Vessel Planning' para posicionar las grúas STS.")
-    elif "falla" in pregunta.lower() or "incidente" in pregunta.lower():
-        st.warning("**Respuesta de la IA (RAG):** El protocolo de incidentes exige cambiar el estado del contenedor a 'Hold-Mechanical' en Navis N4 para detener las grúas.")
+    if ("grúa" in pregunta.lower() or "sts" in pregunta.lower()) and "maquinaria" in data_ia:
+        st.info(f"**Respuesta entrenada por la IA:** {data_ia['maquinaria']}")
+    elif ("falla" in pregunta.lower() or "incidente" in pregunta.lower()) and "seguridad" in data_ia:
+        st.warning(f"**Respuesta entrenada por la IA:** {data_ia['seguridad']}")
     else:
-        st.error("Consulta no mapeada en el fragmento base actual. Intente con palabras como 'grúa' o 'falla'.")
+        st.error("Consulta no mapeada o base de datos de IA actualizándose. Intente con 'grúa' o 'falla'.")
