@@ -2,7 +2,7 @@
 
 Este repositorio contiene un ecosistema inteligente de nivel consultor senior diseñado para optimizar la inducción técnico-operativa del personal en terminales portuarias. Utiliza una arquitectura de Generación Aumentada por Recuperación (RAG) completamente Serverless y agnóstica a la nube, procesando manuales técnicos complejos y exponiendo las respuestas mediante una interfaz web interactiva de acceso público.
 
-🌐 **Demo en Vivo en la Nube:** [https://streamlit.app](https://streamlit.app)
+🌐 **Demo en Vivo en la Nube:** [https://streamlit.app](https://port-ops-navis-n4-ai-assistant.streamlit.app/#asistente-de-ia-operaciones-portuarias-navis-n4)
 
 ---
 
