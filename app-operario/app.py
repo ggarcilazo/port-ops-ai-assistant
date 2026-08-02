@@ -5,7 +5,7 @@ st.set_page_config(page_title="Asistente IA Portuaria", page_icon="⚓")
 st.title("⚓ Asistente de IA - Operaciones Portuarias")
 
 # Leemos el JSON que generó la IA de tu compañero en GitHub
-url_json = "https://githubusercontent.com"
+url_json = "https://raw.githubusercontent.com/ggarcilazo/port-ops-ai-assistant/refs/heads/main/docs-tecnicos/matriz_conocimiento.json"
 
 try:
     data_ia = requests.get(url_json).json()
